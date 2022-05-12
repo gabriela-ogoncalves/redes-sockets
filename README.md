@@ -8,7 +8,7 @@ O objetivo desse trabalho é construir um programa, utilizando sockets, que cont
 
 ## Definições
 
-| Servidor  |  Cliente  | Protocolo  |
+| Cliente   |  Servidor | Protocolo  |
 | :-------: | :-------: | :--------: |
 |  Python   |  NodeJS   |    TCP     |
 
@@ -26,7 +26,7 @@ São funções do **servidor**:
 
 O conjunto **TCP** pode, ou não responder em um processo ou thread separado.
 
-```json
+```
 {
   "tipo": "int" | "char" | "string", 
   "val": 37 | 'm' | "uma frase"
