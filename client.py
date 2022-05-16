@@ -37,7 +37,7 @@ while 1:
   data = tcp.recv(1024).decode('utf-8')
 
   end = current_time()
-  print(data)
+  print("Devolvido: ", data)
   print(f"RTT: {end - start}")
 
 data = tcp.recv(1024).decode('utf-8') #recebe do servidor - máx. 1024 bytes

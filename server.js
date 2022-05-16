@@ -17,20 +17,21 @@ const handleConnection = socket => {
   socket.on('data', data => {
     if (!data) return;
     
-    console.log(`Received: ${data} from ${server.address().address}:${PORT}`)
+    console.log(`Recebido: ${data}`)
   
     const obj = JSON.parse(data);
     const response = {}
+    response.tipo = obj.tipo;
 
     if (obj.tipo === 'int') {
-      response.result = obj.val + 1;
+      response.val = obj.val + 1;
     } else if (obj.tipo === 'char') {
-      response.result = obj.val == obj.val.toUpperCase() 
+      response.val = obj.val == obj.val.toUpperCase() 
         ? obj.val.toLowerCase()
         : obj.val.toUpperCase()
     }
     else if (obj.tipo === 'string') {
-      response.result = [...obj.val].reverse().join("");
+      response.val = [...obj.val].reverse().join("");
     } else return;
 
     socket.write(JSON.stringify(response));
