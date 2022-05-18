@@ -4,7 +4,7 @@ import socket
 import time
 
 IP_SERVER = input('Digite o IP do servidor: ')
-PORT = 9009
+PORT = int(input('Digite a porta: '))
 DESTINO = (IP_SERVER, PORT)
 
 tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -32,7 +32,8 @@ while 1:
   tcp.send(json.dumps(data).encode('utf-8')) # enviar a mensagem para o destino da conexao
   data = tcp.recv(1024).decode('utf-8')
   end = time.time_ns()
-  print("Devolvido:", data)
+
+  print("Devolvido:", json.loads(data))
   print('RTT: {}ns'.format(end-start))
 
 tcp.close()
