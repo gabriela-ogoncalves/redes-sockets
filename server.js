@@ -5,19 +5,20 @@ const PORT = 9009;
 const IP_SERVER = ip.address();
 
 const handleConnection = socket => {
-  console.log('Alguem se conectou');
+  const clientAddress = `${socket.remoteAddress}:${socket.remotePort}`; 
+  console.log(`\nNew client connected: ${clientAddress}\n`);
 
   socket.on('close', () => {
-    console.log('Connection closed');  
+    console.log(`Connection closed ${clientAddress}`);  
   });
 
   socket.on('error', (err) => {
-    console.error(`Connection error: ${err.message}`)
+    console.log(`Error occurred in ${clientAddress}: ${err.message}`); 
   });
 
   socket.on('data', data => {
     if (!data) return;
-    
+
     console.log(`Recebido: ${data}`)
   
     const obj = JSON.parse(data);
