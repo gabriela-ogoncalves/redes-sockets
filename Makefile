@@ -8,10 +8,10 @@ client-py:
 	python3 client.py
 
 server-py:
-	python3 server.py
+	python3 additional_connection/server.py
 
 server-js:
 	node server.js
 
 client-js:
-	node client.js
+	node additional_connection/client.js
