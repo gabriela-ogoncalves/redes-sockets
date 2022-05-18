@@ -3,8 +3,8 @@ import json
 import socket
 import time
 
-IP_SERVER = '127.0.0.1'
-PORT = 8080
+IP_SERVER = input('Digite o IP do servidor: ')
+PORT = 9009
 DESTINO = (IP_SERVER, PORT)
 
 def current_time():
@@ -38,7 +38,7 @@ while 1:
 
   end = current_time()
   print("Devolvido: ", data)
-  print(f"RTT: {end - start}")
+  print("RTT: ", end - start)
 
 data = tcp.recv(1024).decode('utf-8') #recebe do servidor - máx. 1024 bytes
 print(data)

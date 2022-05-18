@@ -1,7 +1,8 @@
 const net = require('net');
+var ip = require('ip');
 
-const PORT = 8080;
-const IP_SERVER = '127.0.0.1';
+const PORT = 9009;
+const IP_SERVER = ip.address();
 
 const handleConnection = socket => {
   console.log('Alguem se conectou');
