@@ -33,6 +33,14 @@ O conjunto **TCP** pode, ou não responder em um processo ou thread separado.
 }
 ```
 
+## Configurando o ambiente
+
+Para configurar o ambiente com as bibliotecas que serão utilizadas no projeto, abra o seu terminal e digite o comando:
+
+```shell
+make setup
+```
+
 ## Rodando o projeto
 
 Para rodar o servidor, abra o seu terminal e digite o comando:

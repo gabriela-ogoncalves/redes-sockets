@@ -1,3 +1,6 @@
+setup:
+	npm install ip
+
 run_client:
 	python3 client.py
 
