@@ -1,6 +1,7 @@
 # Trabalho de Redes - Sockets
 
 ![node](https://img.shields.io/badge/node-10.16.2-blue "Node 10.16.2")
+![python](https://img.shields.io/badge/python-3.8.5-green "Python 3.8.5")
 
 ## Sobre o projeto
 
